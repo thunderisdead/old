@@ -14,7 +14,7 @@ local function createTextBox()
     if not isFocused then
         textBox:SetFocus()
         isFocused = true
-    end
+    end 
     _G.textboxes[#_G.textboxes + 1] = ""
 end
 local EnabledToggle = Section.NewToggle("Click to add box", function(bool)
