@@ -5,9 +5,7 @@ local starterGui = player:WaitForChild("PlayerGui"):WaitForChild("StarterGui")
 _G.Rainbowwings = false
 local Tab = Window.NewTab("Settings")
 local Section = Tab.NewSection("Stuff")
-local message = Instance.new("Message")
-message.Text = "**Bloo old**"
-starterGui:AddItem(message)
+
 _G.move = {
     dmd = 15,
 }
