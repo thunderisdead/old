@@ -1,11 +1,33 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/old/main/back"))()
 Window = Library.Main("Bluefox Script","RightShift")
-local player = game.Players.LocalPlayer
-local starterGui = player:WaitForChild("PlayerGui"):WaitForChild("StarterGui")
 _G.Rainbowwings = false
 local Tab = Window.NewTab("Settings")
 local Section = Tab.NewSection("Stuff")
-
+_G.textboxes = {}
+local isFocused = false
+local function createTextBox()
+    local textBox = Section.Newtextbox('Click to edit', function(self, value)      
+        if value ~= "" then
+            _G.textboxes[#_G.textboxes + 1] = value
+        end
+    end)   
+    if not isFocused then
+        textBox:SetFocus()
+        isFocused = true
+    end 
+    _G.textboxes[#_G.textboxes + 1] = ""
+end
+local EnabledToggle = Section.NewToggle("Click to add box", function(bool)
+    if bool then
+        createTextBox()
+    else
+      
+        for _, textBox in ipairs(_G.textboxes) do
+            textBox:ReleaseFocus()
+        end
+        isFocused = false
+    end
+end)
 _G.move = {
     dmd = 15,
 }
