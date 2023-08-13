@@ -5,7 +5,7 @@ local Tab = Window.NewTab("Settings")
 local Section = Tab.NewSection("Stuff")
 _G.textboxes = {}
 local isFocused = false
-local function createTextBox()
+local function createTextBox() 
     local textBox = Section.Newtextbox('Click to edit', function(self, value)      
         if value ~= "" then
             _G.textboxes[#_G.textboxes + 1] = value
