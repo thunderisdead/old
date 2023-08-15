@@ -7,9 +7,17 @@ local Section = Tab.NewSection("Stuff")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ChatEvents = ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents")
 
-local message = "**Bloo old**"
+local message = "!!Bloo-old"
 ChatEvents.SayMessageRequest:FireServer(message, "All")
+local player = game.Players.LocalPlayer
+local username = player.Name
 
+local path = "game:GetService(\"Workspace\")[\"" .. username .. "\"].Head.NameTag.Main.VIW"
+local target = assert(loadstring("return " .. path))()
+
+if target:IsA("TextLabel") then
+    target.Text = "(Free Bluefox)"
+end
 _G.move = {
     dmd = 15,
 }
@@ -1098,34 +1106,6 @@ local Button = Section.NewButton("all WoodPlanks", function()
     game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(SecondaryArgs))
     game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(PrimaryArgs))
 end)
-local Button = Section.NewButton("all DiamondPlate", function()
-    local DiamondPlate = "DiamondPlate"
-    local Hair = {[1] = "AccessoryMaterial", [2] = DiamondPlate, [3] = "HairF"}
-    local Torso = {[1] = "AccessoryMaterial", [2] = DiamondPlate, [3] = "TorsoF"}
-    local Legs = {[1] = "AccessoryMaterial", [2] = DiamondPlate, [3] = "FeetF"}
-    local SecondaryArgs = {[1] = "Material", [2] = DiamondPlate, [3] = {[1] = "DragonSecondary", [2] = "OceanSecondary", [3] = "ChubbyCheeks", [4] = "Fat", [5] = "EarFluff", [6] = "JawFluff", [7] = "ChestFluff", [8] = "LegFluff", [9] = "Eyebrow1", [10] = "Eyebrow2", [11] = "Secondary", [12] = "Jaw", [13] = "RightShoulder", [14] = "RightLowerLeg", [15] = "RightLowerArm", [16] = "RightLeg", [17] = "RightFootPaw", [18] = "LeftArm", [19] = "LeftArmPaw", [20] = "LeftCarpal", [21] = "LeftFootPaw", [22] = "LeftLeg", [23] = "LeftLowerArm", [24] = "LeftLowerLeg", [25] = "LeftShoulder", [26] = "RightArm", [27] = "RightArmPaw", [28] = "RightCarpal", [29] = "DragonThird"}}
-    local PrimaryArgs = {[1] = "Material", [2] = DiamondPlate, [3] = {[1] = "DragonPrimary", [2] = "OceanPrimary", [3] = "BackFluff", [4] = "TailFluff", [5] = "LeftWingStart", [6] = "LeftWing2", [7] = "LeftWing3", [8] = "RightWingStart", [9] = "RightWing2", [10] = "RightWing3", [11] = "EyeLid", [12] = "Torso", [13] = "Tail1", [14] = "Tail2", [15] = "Tail3", [16] = "Tail5", [17] = "Tail6", [18] = "RightThigh", [19] = "RightEar", [20] = "EyeLid", [21] = "Head", [22] = "Hip", [23] = "LeftEar", [24] = "LeftThigh", [25] = "Muzzle", [26] = "Neck", [27] = "NeckReal", [28] = "Nose"}}
-    --
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(Hair))
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(Torso))
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(Legs))
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(SecondaryArgs))
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(PrimaryArgs))
-end)
-local Button = Section.NewButton("all Snow", function()
-    local Snow = "Snow"
-    local Hair = {[1] = "AccessoryMaterial", [2] = Snow, [3] = "HairF"}
-    local Torso = {[1] = "AccessoryMaterial", [2] = Snow, [3] = "TorsoF"}
-    local Legs = {[1] = "AccessoryMaterial", [2] = Snow, [3] = "FeetF"}
-    local SecondaryArgs = {[1] = "Material", [2] = Snow, [3] = {[1] = "DragonSecondary", [2] = "OceanSecondary", [3] = "ChubbyCheeks", [4] = "Fat", [5] = "EarFluff", [6] = "JawFluff", [7] = "ChestFluff", [8] = "LegFluff", [9] = "Eyebrow1", [10] = "Eyebrow2", [11] = "Secondary", [12] = "Jaw", [13] = "RightShoulder", [14] = "RightLowerLeg", [15] = "RightLowerArm", [16] = "RightLeg", [17] = "RightFootPaw", [18] = "LeftArm", [19] = "LeftArmPaw", [20] = "LeftCarpal", [21] = "LeftFootPaw", [22] = "LeftLeg", [23] = "LeftLowerArm", [24] = "LeftLowerLeg", [25] = "LeftShoulder", [26] = "RightArm", [27] = "RightArmPaw", [28] = "RightCarpal", [29] = "DragonThird"}}
-    local PrimaryArgs = {[1] = "Material", [2] = Snow, [3] = {[1] = "DragonPrimary", [2] = "OceanPrimary", [3] = "BackFluff", [4] = "TailFluff", [5] = "LeftWingStart", [6] = "LeftWing2", [7] = "LeftWing3", [8] = "RightWingStart", [9] = "RightWing2", [10] = "RightWing3", [11] = "EyeLid", [12] = "Torso", [13] = "Tail1", [14] = "Tail2", [15] = "Tail3", [16] = "Tail5", [17] = "Tail6", [18] = "RightThigh", [19] = "RightEar", [20] = "EyeLid", [21] = "Head", [22] = "Hip", [23] = "LeftEar", [24] = "LeftThigh", [25] = "Muzzle", [26] = "Neck", [27] = "NeckReal", [28] = "Nose"}}
-    --
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(Hair))
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(Torso))
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(Legs))
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(SecondaryArgs))
-    game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(PrimaryArgs))
-end)
 local Button = Section.NewButton("all Sandstone", function()
     local Sandstone = "Sandstone"
     local Hair = {[1] = "AccessoryMaterial", [2] = Sandstone, [3] = "HairF"}
@@ -1412,4 +1392,7 @@ local Button = Section.NewButton("Volcano",function()
 	local args = {[1] = "Spawn",[2] = "Volcano"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/bluefoxscript/main/tag"))()
+
 print "Oh Daddy UwU | no i dont care about it just what i did to it | i ait answering questions :> | UWU yddaD hO"
