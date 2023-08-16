@@ -7,7 +7,7 @@ local Section = Tab.NewSection("Stuff")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ChatEvents = ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents")
 
-local message = "!!Bloo-old"
+local message = "!!Blooold"
 ChatEvents.SayMessageRequest:FireServer(message, "All")
 local player = game.Players.LocalPlayer
 local username = player.Name
