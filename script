@@ -8,7 +8,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ChatEvents = ReplicatedStorage:WaitForChild("DefaultChatSystemChatEvents")
 
 local message = "!!nloo"
-ChatEvents.SayMessageRequest:FireServer(message, "All")
+ChatEvents.SayMessageRequest:FireServer(message, "All") 
 local player = game.Players.LocalPlayer
 local username = player.Name
 
