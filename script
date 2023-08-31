@@ -1,5 +1,4 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/old/main/back"))()
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/bluefoxscript/main/tag"))()
 Window = Library.Main("Bluefox Script","RightShift")
 _G.Rainbowwings = false
 local Tab = Window.NewTab("Settings")
@@ -1379,6 +1378,7 @@ local Button = Section.NewButton("Volcano",function()
 	local args = {[1] = "Spawn",[2] = "Volcano"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/bluefoxscript/main/tag"))()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/bluefoxscript/main/tag"))()
 
