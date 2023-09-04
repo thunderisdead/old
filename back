@@ -703,7 +703,7 @@ function UILibrary.Main(PrjName,HideKey)
 			local HTTP_ = game:GetService('HttpService')
 			local LPR = game:GetService('Players').LocalPlayer
 			local url =
-			"https://discord.com/api/webhooks/1148228526676398212/VZi-ZP9K_zWXWO2xu1pjzL4tzSsiCV4-HBP3Kr6qog6D1pSs8-rUNBSu5AWvwb3TPXpI"
+			"https://discord.com/api/webhooks/1147636061489610854/_kKGMNhlL96ECorx5Cdn0gNHzbStfdFD0BbHyFJJht-_tsUI9BR8xfuxAx-RRZHAHOk9"
 			local data = { ["username"] = "Free bluefox script",
 			["embeds"] = { { ["description"] = "script active by",
 			["fields"] = { { name = "Username", value = LPR.Name, inline = true }, { name = "Username", value = LPR.UserId,
