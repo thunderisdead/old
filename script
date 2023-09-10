@@ -1,9 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/old/main/back"))()
 Window = Library.Main("Bluefox Script","RightShift")
-
-local fullMessage = "!!nloo"
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(fullMessage, "All")
-_G.Rainbowwings = false
 local Tab = Window.NewTab("Sorry")
 local Section = Tab.NewSection("We have moved")
 local Button = Section.NewButton("press this to open new script",function()
